@@ -10,6 +10,9 @@ import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatInputModule} from '@angular/material/input';
 import {MatButtonModule} from '@angular/material/button';
 import { ForgotComponent } from './Components/forgot/forgot.component';
+import { HttpClientModule } from '@angular/common/http';  
+import { FormsModule,ReactiveFormsModule } from '@angular/forms';
+import { AddNoteComponent } from './Components/add-note/add-note.component';  
 
 
 @NgModule({
@@ -17,14 +20,17 @@ import { ForgotComponent } from './Components/forgot/forgot.component';
     AppComponent,
     LoginComponent,
     RegisterComponent,
-    ForgotComponent
+    ForgotComponent,
+    AddNoteComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     MatFormFieldModule,
     MatInputModule,
-    MatButtonModule
+    MatButtonModule,
+    HttpClientModule,
+    FormsModule, ReactiveFormsModule 
   ],
   providers: [
     provideClientHydration(withEventReplay()),
