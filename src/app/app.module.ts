@@ -12,8 +12,16 @@ import {MatButtonModule} from '@angular/material/button';
 import { ForgotComponent } from './Components/forgot/forgot.component';
 import { HttpClientModule } from '@angular/common/http';  
 import { FormsModule,ReactiveFormsModule } from '@angular/forms';
-import { AddNoteComponent } from './Components/add-note/add-note.component';  
-
+import { AddNoteComponent } from './Components/add-note/add-note.component';
+import { IconsComponent } from './Components/icons/icons.component';
+import { DisplayComponent } from './Components/display/display.component';
+import { GetAllComponent } from './Components/get-all/get-all.component';
+import { DashboardComponent } from './Components/dashboard/dashboard.component';  
+import { MatMenuModule } from '@angular/material/menu';
+import { RouterModule } from '@angular/router';
+import { MatToolbarModule } from '@angular/material/toolbar';
+import { MatIconModule } from '@angular/material/icon';
+import { MatSidenavModule } from '@angular/material/sidenav';
 
 @NgModule({
   declarations: [
@@ -21,7 +29,11 @@ import { AddNoteComponent } from './Components/add-note/add-note.component';
     LoginComponent,
     RegisterComponent,
     ForgotComponent,
-    AddNoteComponent
+    AddNoteComponent,
+    IconsComponent,
+    DisplayComponent,
+    GetAllComponent,
+    DashboardComponent
   ],
   imports: [
     BrowserModule,
@@ -30,7 +42,12 @@ import { AddNoteComponent } from './Components/add-note/add-note.component';
     MatInputModule,
     MatButtonModule,
     HttpClientModule,
-    FormsModule, ReactiveFormsModule 
+    FormsModule, ReactiveFormsModule,
+    MatMenuModule,
+    RouterModule,
+    MatToolbarModule,
+    MatIconModule,
+    MatSidenavModule
   ],
   providers: [
     provideClientHydration(withEventReplay()),

@@ -5,37 +5,37 @@
             <h1>Register</h1>
             <p>with your Google Account. This account will be available to other Google apps in the browser.</p>
         </div>
-
+    <form [formGroup]="registerForm" (ngSubmit)="Register()">
         <div class="right-section">
             <div class="form-group">
                 <mat-form-field appearance="outline">
                     <mat-label>First Name</mat-label>
-                    <input matInput placeholder="First Name">
+                    <input matInput placeholder="First Name" formControlName="firstName">
                 </mat-form-field>
 
                 <mat-form-field appearance="outline">
                     <mat-label>Last Name</mat-label>
-                    <input matInput placeholder="Last Name">
+                    <input matInput placeholder="Last Name" formControlName="lastName">
                 </mat-form-field>
 
                 <mat-form-field appearance="outline">
                     <mat-label>DOB</mat-label>
-                    <input matInput placeholder="DOB" type="date">
+                    <input matInput placeholder="DOB" type="date" formControlName="dob">
                 </mat-form-field>
 
                 <mat-form-field appearance="outline">
                     <mat-label>Gender</mat-label>
-                    <input matInput placeholder="Gender">
+                    <input matInput placeholder="Gender" formControlName="gender">
                 </mat-form-field>
 
                 <mat-form-field appearance="outline">
                     <mat-label>Email</mat-label>
-                    <input matInput placeholder="Email">
+                    <input matInput placeholder="Email" formControlName="email">
                 </mat-form-field>
 
                 <mat-form-field appearance="outline">
                     <mat-label>Password</mat-label>
-                    <input matInput placeholder="Password" type="password">
+                    <input matInput placeholder="Password" type="password" formControlName="password">
                 </mat-form-field>
             </div>
 
@@ -43,5 +43,6 @@
                 <button mat-flat-button color="primary">Register</button>
             </div>
         </div>
+    </form>
     </div>
 </div>

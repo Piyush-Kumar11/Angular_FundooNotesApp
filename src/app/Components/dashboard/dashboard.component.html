@@ -1,0 +1,75 @@
+<div class="dashboard-container">
+    <!-- Toolbar -->
+    <mat-toolbar color="primary" class="toolbar">
+      <div class="toolbar-content">
+        <!-- Sidenav Toggle Button (Using Custom Image) -->
+        <button mat-icon-button (click)="toggleSidenav()">
+          <img src="images/menu.png" alt="Menu" class="icon">
+        </button>
+
+        <!-- Keep Logo & Text -->
+        <img src="images/keep_image.png" alt="Keep Logo" class="keep-logo">
+        <span class="keep-text">Keep</span>
+
+        <!-- Search Bar Centered -->
+        <div class="toolbar-search">
+          <mat-form-field appearance="outline">
+            <mat-label>Search</mat-label>
+            <input matInput placeholder="Search">
+            <img src="images/search_bar.png" class="search-icon" alt="Search">
+          </mat-form-field>
+        </div>
+
+        <!-- Toolbar Actions -->
+        <div class="toolbar-actions">
+          <button mat-icon-button>
+            <img src="images/refresh.png" class="icon" alt="Refresh">
+          </button>
+          <button mat-icon-button>
+            <img src="images/View.png" class="icon" alt="View Agenda">
+          </button>
+          <button mat-icon-button>
+            <img src="images/settings.png" class="icon" alt="Settings">
+          </button>
+          <button mat-icon-button>
+            <img src="images/apps.png" class="icon" alt="Apps">
+          </button>
+
+          <!-- User Profile Icon -->
+          <img src="images/profile.png" class="profile-icon" alt="User Profile">
+        </div>
+      </div>
+    </mat-toolbar>
+
+    <!-- Sidenav -->
+    <mat-sidenav-container class="sidenav-container">
+      <mat-sidenav #sidenav mode="side" opened class="sidenav">
+        <button mat-button class="sidenav-item">
+          <img src="images/lightbulb.png" class="sidenav-icon" alt="Notes">
+          <span class="sidenav-text">Notes</span>
+        </button>
+
+        <button mat-button class="sidenav-item">
+          <img src="images/reminder.png" class="sidenav-icon" alt="Reminders">
+          <span class="sidenav-text">Reminders</span>
+        </button>
+
+        <button mat-button class="sidenav-item">
+          <img src="images/edit.png" class="sidenav-icon" alt="Edit Labels">
+          <span class="sidenav-text">Edit labels</span>
+        </button>
+
+        <button mat-button class="sidenav-item">
+          <img src="images/archive.png" class="sidenav-icon" alt="Archive">
+          <span class="sidenav-text">Archive</span>
+        </button>
+
+        <button mat-button class="sidenav-item">
+          <img src="images/delete.png" class="sidenav-icon" alt="Trash">
+          <span class="sidenav-text">Trash</span>
+        </button>
+      </mat-sidenav>
+
+      <mat-sidenav-content></mat-sidenav-content>
+    </mat-sidenav-container>
+</div>

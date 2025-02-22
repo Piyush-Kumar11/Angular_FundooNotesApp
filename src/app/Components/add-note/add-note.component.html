@@ -1,1 +1,45 @@
-<p>add-note works!</p>
+<div>
+    <div *ngif="display;then takenotes else inputNotes"></div>
+        <ng-template #takeNotes>
+            <div class="takenotes">
+                <input class="notesbar" type="text" placeholder="Take a note..." (click)="display = !display">
+                <button class="notesbutton">
+                    <img class="notes_img" src="checkbox.svg">
+                </button>
+                <button class="notesbutton">
+                    <img class="notes_img" src="draw.svg">
+                </button>
+                <button class="notesbutton">
+                    <img class="notes_img" src="">
+                </button>
+            </div>
+        </ng-template>
+        <ng-template #inputNotes>
+            <form [formGroup]="notesForm" (ngSubmit)="onSubmit()">
+                <div class="createnotes">
+                    <div class="notesfield">
+                        <div class="titlebar">
+                            <input class="title" type="text" placeholder="Title" formControlName="title">
+                            <button class="notesbutton">
+                                <img class="notes_img" src="">
+                            </button>
+                        </div>
+                        <input class="desc" type="text" placeholder="Take a note..." style="font-size: 15px; font-weight: 200;" 
+                            formControlName="description">
+                        <div class="notesicon">
+                            <div class="icons">
+                                <app-icons></app-icons>
+                                <button class="notesbutton" style="display: flex; gap: 15px;">
+                                    <img id="7" class="moreicons" src="undo.svg">
+                                    <img id="8" class="moreicons" src="redo.svg">
+                                </button>
+                            </div>
+                            <button class="notesclose notesbutton">
+                                Close
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </ng-template>
+</div>>
